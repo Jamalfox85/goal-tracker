@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const CustomerInfo = (props) => {
   const [userName, setUserName] = useState("Jeff");
@@ -7,9 +8,10 @@ const CustomerInfo = (props) => {
   const [pinkScenario, setPinkScenario] = useState("Pink Scenario");
   //   const [redirect, setRedirect] = useState(true);
 
+  let history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.history.push("/setgoal");
+    history.push("/setgoal");
   };
 
   return (
@@ -19,7 +21,7 @@ const CustomerInfo = (props) => {
         <h1>{email}</h1>
         <h1>{pinkScenario}</h1>
       </div>
-      <form className="userInfoForm">
+      <form className="userInfoForm" onSubmit={handleSubmit}>
         <label>
           Name:
           <input
@@ -44,7 +46,7 @@ const CustomerInfo = (props) => {
             onChange={(event) => setPinkScenario(event.target.value)}
           ></textarea>
         </label>
-        <input type="submit" value="Submit" onSubmit={handleSubmit} />
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
