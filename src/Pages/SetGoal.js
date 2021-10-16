@@ -1,11 +1,12 @@
 import React from "react";
 import {useState} from "react"
-import Milestone from "../components/CustomerInfo/Milestone";
+import MilestoneInput from "../components/CustomerInfo/MilestoneInput";
 
 const SetGoal = () => {
 
   const [goalTitle, setGoalTitle] = useState("Title")
   const [isDisabled, setIsDisabled] = useState(false)
+  const [tier, setTier] = useState(2)
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,10 +33,12 @@ const SetGoal = () => {
       </div>
       <div className='goal_result'>
         <form onSubmit={handleSubmit}>
-          <Milestone milestone="1st milestone" disabled={true}/>
-          <Milestone milestone="1st milestone" disabled={true}/>
-          <Milestone milestone="1st milestone" disabled={true} tier={2}/>
-          <Milestone milestone="end goal" />
+          <MilestoneInput milestone="1st milestone" disabled={tier >= 3 ? false : true}/>
+          <MilestoneInput milestone="1st milestone" disabled={tier >= 2 ? false : true}
+          
+          />
+          <MilestoneInput milestone="1st milestone" disabled={tier >= 2 ? false : true}/>
+          <MilestoneInput milestone="end goal" />
           <input type="submit"/>
         </form>
       </div>

@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 
-const Milestone = ({disabled, milestone}) => {
+const MilestoneInput = ({disabled, milestone}) => {
 
     const [isDisabled, setIsDisabled] = useState(false)
 
@@ -23,4 +23,4 @@ const Milestone = ({disabled, milestone}) => {
     )
 }
 
-export default Milestone
+export default MilestoneInput
