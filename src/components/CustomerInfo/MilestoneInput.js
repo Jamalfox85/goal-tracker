@@ -1,21 +1,30 @@
 import { React, useState } from "react";
 
-const MilestoneInput = ({ disabled, milestone }) => {
+const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
   const [isDisabled, setIsDisabled] = useState(false);
+  const [milestoneValue, setMilestoneValue] = useState('')
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleMilestoneInputChange = (e) => {
+    setMilestoneValue(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setIsDisabled(true);
+    checkMilestoneData(milestoneValue)
+
   };
   const handleEdit = () => {
     setIsDisabled(false);
   };
 
+
+
   return (
     <div style={disabled ? { pointerEvents: "none", opacity: "0.4" } : {}}>
       <label>
         {milestone}
-        <input disabled={isDisabled} placeholder="End Goal" type="text" />
+        <input disabled={isDisabled} placeholder="End Goal" type="text" onChange={handleMilestoneInputChange} />
         <span onClick={handleSubmit}>X</span>
         <span onClick={handleEdit}>O</span>
       </label>
