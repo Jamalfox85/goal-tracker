@@ -18,7 +18,6 @@ const CustomerInfo = (props) => {
         <h1>{userName}</h1>
         <h1>{email}</h1>
         <h1>{pinkScenario}</h1>
-        <h1>{pinkScenario}</h1>
       </div>
       <form className="userInfoForm">
         <label>
