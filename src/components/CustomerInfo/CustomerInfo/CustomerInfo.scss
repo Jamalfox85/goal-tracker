@@ -1,0 +1,141 @@
+$base-color: #00a676;
+$accent-dark: #031d44;
+
+.customer-info-wrapper {
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+
+  .bg-blobs {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    .blob1 {
+      left: 0;
+      top: 0;
+      position: absolute;
+    }
+    .blob2 {
+      left: 30%;
+      top: 20%;
+      position: absolute;
+    }
+    .blob3 {
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    .blob4 {
+      bottom: 0;
+      left: 40%;
+      position: absolute;
+    }
+  }
+
+  .user-info {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .landing-laptop-img {
+      position: absolute;
+      top: 5em;
+    }
+    .user-info-laptop-text {
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      position: relative;
+      z-index: 2;
+      color: white;
+      top: -8em;
+      left: 4em;
+      transform: rotate(25deg);
+      font-family: "Courier New", Courier, monospace;
+      .user-name-laptop-text {
+        display: flex;
+        p {
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+  .user-info-form {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-evenly;
+      .user-info-form-header {
+        color: $accent-dark;
+        font-size: 48px;
+        text-align: left;
+        margin-bottom: 1em;
+      }
+      .name-inputs {
+        display: flex;
+        label {
+          margin-right: 1em;
+          input {
+            width: 7em;
+            text-align: center;
+          }
+        }
+      }
+      .email-input {
+        input {
+          text-align: center;
+        }
+      }
+      .pink-scenario {
+        textarea {
+          padding: 1em;
+        }
+      }
+      label {
+        color: $accent-dark;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        p {
+          margin-bottom: 0.25em;
+        }
+        input,
+        textarea {
+          border: solid 1px $accent-dark;
+          border-radius: 25px;
+          padding: 0.3em;
+          outline: none;
+        }
+        input:focus,
+        textarea:focus {
+          border: solid 3px $accent-dark;
+        }
+      }
+      .user-info-submit-bttn {
+        border-radius: 25px;
+        background-color: $base-color;
+        color: white;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0.5em 2em;
+      }
+    }
+  }
+}

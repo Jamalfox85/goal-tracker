@@ -1,0 +1,204 @@
+.customer-info-wrapper {
+  height: 100vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customer-info-wrapper .bg-blobs {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+
+.customer-info-wrapper .bg-blobs .blob1 {
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.customer-info-wrapper .bg-blobs .blob2 {
+  left: 30%;
+  top: 20%;
+  position: absolute;
+}
+
+.customer-info-wrapper .bg-blobs .blob3 {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.customer-info-wrapper .bg-blobs .blob4 {
+  bottom: 0;
+  left: 40%;
+  position: absolute;
+}
+
+.customer-info-wrapper .user-info {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.customer-info-wrapper .user-info .landing-laptop-img {
+  position: absolute;
+  top: 5em;
+}
+
+.customer-info-wrapper .user-info .user-info-laptop-text {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  z-index: 2;
+  color: white;
+  top: -8em;
+  left: 4em;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.customer-info-wrapper .user-info .user-info-laptop-text .user-name-laptop-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.customer-info-wrapper .user-info .user-info-laptop-text .user-name-laptop-text p {
+  margin-right: 0.5em;
+}
+
+.customer-info-wrapper .user-info-form {
+  height: 80%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.customer-info-wrapper .user-info-form form {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.customer-info-wrapper .user-info-form form .user-info-form-header {
+  color: #031d44;
+  font-size: 48px;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.customer-info-wrapper .user-info-form form .name-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.customer-info-wrapper .user-info-form form .name-inputs label {
+  margin-right: 1em;
+}
+
+.customer-info-wrapper .user-info-form form .name-inputs label input {
+  width: 7em;
+  text-align: center;
+}
+
+.customer-info-wrapper .user-info-form form .email-input input {
+  text-align: center;
+}
+
+.customer-info-wrapper .user-info-form form .pink-scenario textarea {
+  padding: 1em;
+}
+
+.customer-info-wrapper .user-info-form form label {
+  color: #031d44;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.customer-info-wrapper .user-info-form form label p {
+  margin-bottom: 0.25em;
+}
+
+.customer-info-wrapper .user-info-form form label input,
+.customer-info-wrapper .user-info-form form label textarea {
+  border: solid 1px #031d44;
+  border-radius: 25px;
+  padding: 0.3em;
+  outline: none;
+}
+
+.customer-info-wrapper .user-info-form form label input:focus,
+.customer-info-wrapper .user-info-form form label textarea:focus {
+  border: solid 3px #031d44;
+}
+
+.customer-info-wrapper .user-info-form form .user-info-submit-bttn {
+  border-radius: 25px;
+  background-color: #00a676;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0.5em 2em;
+}
+/*# sourceMappingURL=CustomerInfo.css.map */

@@ -2,6 +2,7 @@ import Landing from "./Pages/Landing";
 import SetGoal from "./Pages/SetGoal";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Schedule from "./Pages/Schedule";
+import "../src/Main.css";
 
 function App() {
   return (

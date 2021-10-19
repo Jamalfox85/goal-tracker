@@ -1,9 +1,10 @@
 import React from "react";
-import CustomerInfo from "../components/CustomerInfo/CustomerInfo";
+import CustomerInfo from "../components/CustomerInfo/CustomerInfo/CustomerInfo";
+import "./Landing.css";
 
 const Landing = () => {
   return (
-    <div>
+    <div className="landing-page">
       <CustomerInfo />
     </div>
   );

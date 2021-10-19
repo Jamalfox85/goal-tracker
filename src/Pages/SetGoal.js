@@ -18,9 +18,9 @@ const SetGoal = () => {
   };
   const checkMilestoneData = (data) => {
     if (data) {
-      setTier(tier + 1)
+      setTier(tier + 1);
       console.log(data);
-      console.log(tier)
+      console.log(tier);
     }
   };
 
@@ -106,15 +106,17 @@ const SetGoal = () => {
       </div>
       <div className="goal_result">
         <form onSubmit={handleSubmit}>
-          {milestoneData.map(({item, index, milestone, disabled, displayTier}) => (
-            <MilestoneInput
-              key={Math.random()}
-              milestone={milestone}
-              disabled={tier > displayTier ? false: true}
-              displayTier={displayTier}
-              checkMilestoneData={checkMilestoneData}
-            />
-          ))}
+          {milestoneData.map(
+            ({ item, index, milestone, disabled, displayTier }) => (
+              <MilestoneInput
+                key={Math.random()}
+                milestone={milestone}
+                disabled={tier > displayTier ? false : true}
+                displayTier={displayTier}
+                checkMilestoneData={checkMilestoneData}
+              />
+            )
+          )}
           <input type="submit" />
         </form>
       </div>
