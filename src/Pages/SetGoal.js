@@ -7,6 +7,7 @@ const SetGoal = () => {
   const [goalTitle, setGoalTitle] = useState("Title");
   const [isDisabled, setIsDisabled] = useState(false);
   const [tier, setTier] = useState(2);
+  const [tierCounter, setTierCounter] = useState(0);
 
   let history = useHistory();
   const handleSubmit = (event) => {
