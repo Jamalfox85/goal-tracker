@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import MilestoneInput from "../components/CustomerInfo/MilestoneInput";
+import MilestoneInput from "../components/CustomerInfo/MilestoneInput/MilestoneInput";
+import "./SetGoal.css";
+import editIcon from "../Assets/edit-icon.png";
 
 const SetGoal = () => {
-  const [goalTitle, setGoalTitle] = useState("Title");
+  const [goalTitle, setGoalTitle] = useState("This is Your Goal");
   const [isDisabled, setIsDisabled] = useState(false);
   const [tier, setTier] = useState(2);
   const [tierCounter, setTierCounter] = useState(0);
@@ -89,12 +91,14 @@ const SetGoal = () => {
   ];
 
   return (
-    <div>
-      <div className="goal_header">
+    <div className="set-goal">
+      <div className="goal-header">
+        <h6 className="h6-header">Let's Gather Some Info</h6>
         <h1>
           {goalTitle}
-          <hr />
-          <span onClick={handleEdit}>Edit</span>
+          <span onClick={handleEdit}>
+            <img className="editIcon" src={editIcon} alt="edit icon" />
+          </span>
         </h1>
         <form onSubmit={handleSubmit}>
           <input
@@ -105,8 +109,8 @@ const SetGoal = () => {
           <input type="submit" />
         </form>
       </div>
-      <div className="goal_result">
-        <form onSubmit={handleSubmit}>
+      <div className="goal-result">
+        <form className="milestoneList" onSubmit={handleSubmit}>
           {milestoneData.map(
             ({ item, index, milestone, disabled, displayTier }) => (
               <MilestoneInput
@@ -118,7 +122,11 @@ const SetGoal = () => {
               />
             )
           )}
-          <input type="submit" />
+          <input
+            className="generateScheduleBttn"
+            type="submit"
+            value="Generate Schedule"
+          />
         </form>
       </div>
     </div>

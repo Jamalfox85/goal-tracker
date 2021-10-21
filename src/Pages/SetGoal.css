@@ -1,0 +1,45 @@
+.set-goal {
+  height: 100vh;
+  width: 100%;
+  background-color: #00a676;
+}
+.goal-header {
+  background-image: url("../Assets/SetGoal-Header.png");
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+.h6-header {
+  position: relative;
+  top: -2em;
+  color: #fff;
+}
+.editIcon {
+  height: 1em;
+  margin-left: 0.25em;
+}
+.goal-result {
+  background-color: #fff;
+  height: 80vh;
+}
+.milestoneList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.generateScheduleBttn {
+  border-radius: 25px;
+  background-color: #00a676;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0.5em 2em;
+  width: 15em;
+  margin-top: 2em;
+}
