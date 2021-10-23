@@ -67,6 +67,7 @@
 
 .customer-info-wrapper .user-info .user-info-laptop-text {
   height: 150px;
+  width: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,16 +86,24 @@
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
   font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin-left: 2em;
 }
 
 .customer-info-wrapper .user-info .user-info-laptop-text .user-name-laptop-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: bold;
+  color: #00a676;
 }
 
 .customer-info-wrapper .user-info .user-info-laptop-text .user-name-laptop-text p {
   margin-right: 0.5em;
+}
+
+.customer-info-wrapper .user-info .user-info-laptop-text .user-pink-scenario {
+  font-size: 12px;
 }
 
 .customer-info-wrapper .user-info-form {
@@ -160,6 +169,7 @@
 
 .customer-info-wrapper .user-info-form form .pink-scenario textarea {
   padding: 1em;
+  width: 40%;
 }
 
 .customer-info-wrapper .user-info-form form label {
@@ -176,6 +186,8 @@
 
 .customer-info-wrapper .user-info-form form label p {
   margin-bottom: 0.25em;
+  position: relative;
+  top: -2em;
 }
 
 .customer-info-wrapper .user-info-form form label input,
@@ -184,6 +196,9 @@
   border-radius: 25px;
   padding: 0.3em;
   outline: none;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .customer-info-wrapper .user-info-form form label input:focus,
@@ -200,5 +215,14 @@
   font-weight: bold;
   font-size: 16px;
   padding: 0.5em 2em;
+  position: relative;
+  top: 6em;
+}
+
+.customer-info-wrapper .user-info-form form .user-info-submit-bttn:hover {
+  background-color: #029168;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 /*# sourceMappingURL=CustomerInfo.css.map */

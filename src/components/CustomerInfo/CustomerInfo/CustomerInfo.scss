@@ -1,5 +1,6 @@
 $base-color: #00a676;
 $accent-dark: #031d44;
+$hover-color: #029168;
 
 .customer-info-wrapper {
   height: 100vh;
@@ -49,6 +50,7 @@ $accent-dark: #031d44;
     }
     .user-info-laptop-text {
       height: 150px;
+      width: 200px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -59,11 +61,18 @@ $accent-dark: #031d44;
       left: 4em;
       transform: rotate(25deg);
       font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      margin-left: 2em;
       .user-name-laptop-text {
         display: flex;
+        font-weight: bold;
+        color: $base-color;
         p {
           margin-right: 0.5em;
         }
+      }
+      .user-pink-scenario {
+        font-size: 12px;
       }
     }
   }
@@ -104,6 +113,7 @@ $accent-dark: #031d44;
       .pink-scenario {
         textarea {
           padding: 1em;
+          width: 40%;
         }
       }
       label {
@@ -113,6 +123,8 @@ $accent-dark: #031d44;
         flex-direction: column;
         p {
           margin-bottom: 0.25em;
+          position: relative;
+          top: -2em;
         }
         input,
         textarea {
@@ -120,6 +132,9 @@ $accent-dark: #031d44;
           border-radius: 25px;
           padding: 0.3em;
           outline: none;
+          position: absolute;
+          z-index: 3;
+          background-color: rgba(255, 255, 255, 0.5);
         }
         input:focus,
         textarea:focus {
@@ -135,6 +150,13 @@ $accent-dark: #031d44;
         font-weight: bold;
         font-size: 16px;
         padding: 0.5em 2em;
+        position: relative;
+        top: 6em;
+      }
+      .user-info-submit-bttn:hover {
+        background-color: $hover-color;
+        cursor: pointer;
+        transition: 0.2s ease;
       }
     }
   }

@@ -35,6 +35,8 @@ const CustomerInfo = (props) => {
               <input
                 type="text"
                 name="firstName"
+                maxlength="10"
+                required
                 onChange={(event) => setUserFirstName(event.target.value)}
               />
             </label>
@@ -43,6 +45,8 @@ const CustomerInfo = (props) => {
               <input
                 type="text"
                 name="lastName"
+                maxlength="10"
+                required
                 onChange={(event) => setUserLastName(event.target.value)}
               />
             </label>
@@ -52,6 +56,8 @@ const CustomerInfo = (props) => {
             <input
               type="email"
               name="email"
+              maxlength="25"
+              required
               onChange={(event) => setEmail(event.target.value)}
             />
           </label>
@@ -60,6 +66,7 @@ const CustomerInfo = (props) => {
             <textarea
               rows="8"
               cols="75"
+              required
               onChange={(event) => setPinkScenario(event.target.value)}
             ></textarea>
           </label>
@@ -77,7 +84,7 @@ const CustomerInfo = (props) => {
             <p>{userLastName}</p>
           </div>
           <p>{email}</p>
-          <p>{pinkScenario}</p>
+          <p className="user-pink-scenario">{pinkScenario}</p>
         </div>
         <img className="landing-laptop-img" src={laptopImg} alt="laptop svg" />
       </div>
