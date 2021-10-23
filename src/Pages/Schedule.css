@@ -2,6 +2,8 @@
   height: 100vh;
   width: 100%;
   background-color: #00a676;
+  display: flex;
+  flex-direction: column;
 }
 .schedule-header {
   background-image: url("../Assets/SetGoal-Header.png");
@@ -12,6 +14,11 @@
   align-items: center;
   height: 20vh;
 }
+.h6-schedule-header {
+  position: relative;
+  top: -3em;
+  color: #fff;
+}
 .schedule-main {
   background-color: #fff;
   height: 80vh;
@@ -19,15 +26,22 @@
   text-align: center;
   padding: 0 10%;
 }
-.h6-schedule-header {
-  position: relative;
-  top: -3em;
-  color: #fff;
+.table-header-wrapper {
+  display: flex;
+}
+.table-header-wrapper .schedule-entry-deadline {
+  background-color: transparent;
+  color: #031d44;
+}
+tbody {
+  width: 80vw;
+  position: absolute;
+  margin-top: 1em;
 }
 
 .scheduleEntry {
   height: 30px;
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,11 +56,16 @@
   overflow: hidden;
   background-color: #00a67718;
   border: solid 1px #999;
-  padding: 0 1em;
   position: relative;
 }
-
-.schedule-deadline {
+.schedule-entry-step {
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+}
+.schedule-entry-deadline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,4 +79,31 @@
   color: #fff;
   padding: 0.5em;
   height: 2em;
+  width: 25%;
+  max-width: 200px;
+}
+.schedule-entry-milestone {
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+}
+.schedule-entry-checkbox {
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+}
+.print-schedule-bttn {
+  border-radius: 25px;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0.5em 2em;
+  position: relative;
+  background-color: #00a676;
 }

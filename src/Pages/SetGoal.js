@@ -3,27 +3,25 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import MilestoneInput from "../components/CustomerInfo/MilestoneInput/MilestoneInput";
 import "./SetGoal.css";
-import editIcon from "../Assets/edit-icon.png";
+// import editIcon from "../Assets/edit-icon.png";
 
 const SetGoal = () => {
-  const [goalTitle, setGoalTitle] = useState("This is Your Goal");
-  const [isDisabled, setIsDisabled] = useState(false);
+  // const [goalTitle, setGoalTitle] = useState("This is Your Goal");
+  // const [isDisabled, setIsDisabled] = useState(false);
   const [tier, setTier] = useState(2);
-  const [tierCounter, setTierCounter] = useState(0);
+  // const [tierCounter, setTierCounter] = useState(0);
 
   let history = useHistory();
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     history.push("/schedule");
   };
-  const handleEdit = () => {
-    setIsDisabled(false);
-  };
+  // const handleEdit = () => {
+  //   setIsDisabled(false);
+  // };
   const checkMilestoneData = (data) => {
     if (data) {
       setTier(tier + 1);
-      console.log(data);
-      console.log(tier);
     }
   };
 
@@ -31,12 +29,12 @@ const SetGoal = () => {
     {
       milestone: "1st milestone",
       disabled: true,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "2nd milestone",
       disabled: true,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "3rd milestone",
@@ -46,12 +44,12 @@ const SetGoal = () => {
     {
       milestone: "4th milestone",
       disabled: false,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "5th milestone",
       disabled: true,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "6th milestone",
@@ -61,12 +59,12 @@ const SetGoal = () => {
     {
       milestone: "7th milestone",
       disabled: true,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "8th milestone",
       disabled: false,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "9th milestone",
@@ -76,12 +74,12 @@ const SetGoal = () => {
     {
       milestone: "10th milestone",
       disabled: true,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "11th milestone",
       disabled: true,
-      displayTier: 3,
+      displayTier: 5,
     },
     {
       milestone: "12th milestone",
@@ -95,18 +93,20 @@ const SetGoal = () => {
       <div className="goal-header">
         <h6 className="h6-header">Let's Gather Some Info</h6>
         <h1>
-          {goalTitle}
-          <span onClick={handleEdit}>
+          {/* {goalTitle} */}
+          {/* <span onClick={handleEdit}>
             <img className="editIcon" src={editIcon} alt="edit icon" />
-          </span>
+          </span> */}
         </h1>
         <form onSubmit={handleSubmit}>
           <input
-            disabled={isDisabled}
+            className="goal-input-field"
+            // disabled={isDisabled}
             name="goal"
-            onChange={(event) => setGoalTitle(event.target.value)}
+            required
+            placeholder="This is Your Goal"
+            // onChange={(event) => setGoalTitle(event.target.value)}
           />
-          <input type="submit" />
         </form>
       </div>
       <div className="goal-result">

@@ -1,6 +1,7 @@
 .milestoneInput {
   width: 80%;
   max-width: 750px;
+  height: 2em;
   display: flex;
   margin: 0.25em;
   border: solid 2px black;
@@ -8,6 +9,11 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  transition: 0.3s ease;
+  input {
+    overflow: hidden;
+    height: 100%;
+  }
   .milestoneTag {
     height: 2em;
     width: 20%;

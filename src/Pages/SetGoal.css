@@ -14,8 +14,20 @@
 }
 .h6-header {
   position: relative;
-  top: -2em;
+  top: -3em;
   color: #fff;
+}
+.goal-input-field {
+  border: none;
+  position: relative;
+  font-size: 36px;
+  text-align: center;
+  background-color: transparent;
+  font-weight: bold;
+  color: #04395e;
+}
+.goal-input-field:focus {
+  outline: none;
 }
 .editIcon {
   height: 1em;

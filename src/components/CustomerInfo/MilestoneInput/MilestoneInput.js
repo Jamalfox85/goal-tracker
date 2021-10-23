@@ -11,7 +11,7 @@ const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
     setMilestoneValue(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleMilestoneSubmit = (e) => {
     e.preventDefault();
     setIsDisabled(true);
     checkMilestoneData(milestoneValue);
@@ -23,11 +23,17 @@ const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
   return (
     <div
       className="milestoneInput"
-      style={disabled ? { pointerEvents: "none", opacity: "0.4" } : {}}
+      style={
+        disabled
+          ? { pointerEvents: "none", opacity: "0" }
+          : { opacity: "1", transition: 0.3 }
+      }
     >
       <div className="milestoneTag">{milestone}</div>
       <input
         disabled={isDisabled}
+        style={isDisabled ? { backgroundColor: "#999" } : {}}
+        required
         placeholder="End Goal"
         type="text"
         onChange={handleMilestoneInputChange}
@@ -37,7 +43,7 @@ const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
         <span onClick={handleEdit}>
           <img className="milestoneBttn" src={editIcon} alt="submit button" />
         </span>
-        <span onClick={handleSubmit}>
+        <span onClick={handleMilestoneSubmit}>
           <img className="milestoneBttn" src={checkIcon} alt="submit button" />
         </span>
       </div>
