@@ -1,0 +1,63 @@
+.schedule-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #00a676;
+}
+.schedule-header {
+  background-image: url("../Assets/SetGoal-Header.png");
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+.schedule-main {
+  background-color: #fff;
+  height: 80vh;
+  width: 100%;
+  text-align: center;
+  padding: 0 10%;
+}
+.h6-schedule-header {
+  position: relative;
+  top: -3em;
+  color: #fff;
+}
+
+.scheduleEntry {
+  height: 30px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.25em;
+  border-radius: 25px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #00a67718;
+  border: solid 1px #999;
+  padding: 0 1em;
+  position: relative;
+}
+
+.schedule-deadline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #031d44;
+  color: #fff;
+  padding: 0.5em;
+  height: 2em;
+}
