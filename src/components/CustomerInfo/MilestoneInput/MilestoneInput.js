@@ -3,9 +3,12 @@ import "./MilestoneInput.css";
 import editIcon from "../../../Assets/edit-icon.png";
 import checkIcon from "../../../Assets/check-icon.png";
 
-const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
+const MilestoneInput = (
+  { disabled, milestone, checkMilestoneData, inputValue, grabInputValue },
+  props
+) => {
   const [isDisabled, setIsDisabled] = useState(false);
-  const [milestoneValue, setMilestoneValue] = useState("");
+  const [milestoneValue, setMilestoneValue] = useState(1);
 
   const handleMilestoneInputChange = (e) => {
     setMilestoneValue(e.target.value);
@@ -15,6 +18,7 @@ const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
     e.preventDefault();
     setIsDisabled(true);
     checkMilestoneData(milestoneValue);
+    grabInputValue(milestoneValue);
   };
   const handleEdit = () => {
     setIsDisabled(false);
@@ -38,6 +42,7 @@ const MilestoneInput = ({ disabled, milestone, checkMilestoneData }, props) => {
         type="text"
         onChange={handleMilestoneInputChange}
         className="milestoneInputField"
+        defaultValue={inputValue}
       />
       <div className="milestoneBttns">
         <span onClick={handleEdit}>

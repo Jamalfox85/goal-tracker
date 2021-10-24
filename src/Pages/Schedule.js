@@ -11,6 +11,9 @@ const Schedule = () => {
     milestoneDate.setMonth(milestoneDate.getMonth() + milestone);
     return milestoneDate.toDateString();
   };
+  const printWindow = () => {
+    window.print();
+  };
 
   const schedule = [
     {
@@ -122,7 +125,9 @@ const Schedule = () => {
           ))}
         </tbody>
       </table>
-      <button className="print-schedule-bttn">Print Schedule</button>
+      <button className="print-schedule-bttn" onClick={printWindow}>
+        Print Schedule
+      </button>
     </div>
   );
 };
