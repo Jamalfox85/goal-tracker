@@ -1,7 +1,7 @@
 import React from "react";
 import "./Schedule.css";
 
-const Schedule = () => {
+const Schedule = ({ milestoneInformation }) => {
   // const goalLength = 12;
   // const d1 = new Date()
   // d1.setMonth(d1.getMonth()+ goalLength)
@@ -17,73 +17,73 @@ const Schedule = () => {
 
   const schedule = [
     {
-      goal: "Run more",
+      goal: milestoneInformation[4],
       milestone: 1,
       deadline: setMilestoneDate(1),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Read more",
+      goal: milestoneInformation[5],
       milestone: 2,
       deadline: setMilestoneDate(2),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[1],
       milestone: 3,
       deadline: setMilestoneDate(3),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[6],
       milestone: 4,
       deadline: setMilestoneDate(4),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[7],
       milestone: 5,
       deadline: setMilestoneDate(5),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Read more",
+      goal: milestoneInformation[2],
       milestone: 6,
       deadline: setMilestoneDate(6),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[8],
       milestone: 7,
       deadline: setMilestoneDate(7),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[9],
       milestone: 8,
       deadline: setMilestoneDate(8),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[3],
       milestone: 9,
       deadline: setMilestoneDate(9),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Read more",
+      goal: milestoneInformation[10],
       milestone: 10,
       deadline: setMilestoneDate(10),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[11],
       milestone: 11,
       deadline: setMilestoneDate(11),
       completed: <input type="checkbox" />,
     },
     {
-      goal: "Run more",
+      goal: milestoneInformation[0],
       milestone: 12,
       deadline: setMilestoneDate(12),
       completed: <input type="checkbox" />,
@@ -116,7 +116,7 @@ const Schedule = () => {
                 {schedule[index].deadline}
               </td>
               <td className="schedule-entry-milestone">
-                {schedule[index].item}
+                {schedule[index].goal}
               </td>
               <td className="schedule-entry-checkbox">
                 {schedule[index].completed}

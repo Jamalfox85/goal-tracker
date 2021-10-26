@@ -5,7 +5,7 @@ import MilestoneInput from "../components/CustomerInfo/MilestoneInput/MilestoneI
 import "./SetGoal.css";
 // import editIcon from "../Assets/edit-icon.png";
 
-const SetGoal = () => {
+const SetGoal = ({ passMilestones }) => {
   // const [goalTitle, setGoalTitle] = useState("This is Your Goal");
   // const [isDisabled, setIsDisabled] = useState(false);
   const [tier, setTier] = useState(2);
@@ -29,84 +29,87 @@ const SetGoal = () => {
   // const [currentIndex, setCurrentIndex] = useState(0);
 
   const grabInputValue = (data) => {
-    goalInputValues.push(data);
-    console.log(goalInputValues);
+    setGoalInputValues([...goalInputValues, " " + data]);
   };
 
-  const goalInputValues = [];
+  const handleGenerateSchedule = () => {
+    passMilestones([goalInputValues]);
+  };
+
+  const [goalInputValues, setGoalInputValues] = useState([]);
 
   const milestoneData = [
     {
       milestone: "1st milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 5,
-      input: "first input",
+      input: goalInputValues[4],
     },
     {
       milestone: "2nd milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 5,
-      input: "2X",
+      input: goalInputValues[5],
     },
     {
       milestone: "3rd milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 2,
-      input: "3",
+      input: goalInputValues[1],
     },
     {
       milestone: "4th milestone",
-      disabled: false,
+      // disabled: false,
       displayTier: 5,
-      input: "4X",
+      input: goalInputValues[6],
     },
     {
       milestone: "5th milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 5,
-      input: "5x",
+      input: goalInputValues[7],
     },
     {
       milestone: "6th milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 2,
-      input: "6x",
+      input: goalInputValues[2],
     },
     {
       milestone: "7th milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 5,
-      input: "7x",
+      input: goalInputValues[8],
     },
     {
       milestone: "8th milestone",
-      disabled: false,
+      // disabled: false,
       displayTier: 5,
-      input: "8x",
+      input: goalInputValues[9],
     },
     {
       milestone: "9th milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 2,
-      input: "9x",
+      input: goalInputValues[3],
     },
     {
       milestone: "10th milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 5,
-      input: "10X",
+      input: goalInputValues[10],
     },
     {
       milestone: "11th milestone",
-      disabled: true,
+      // disabled: true,
       displayTier: 5,
-      input: "11X",
+      input: goalInputValues[11],
     },
     {
       milestone: "12th milestone",
-      disabled: false,
+      // disabled: false,
       displayTier: 1,
-      input: "12X",
+      input: goalInputValues[0],
     },
   ];
 
@@ -145,18 +148,12 @@ const SetGoal = () => {
                 grabInputValue={grabInputValue}
               />
             )
-            // setCurrentIndex(currentIndex < 11 ? currentIndex + 1 : 3),
-            // useEffect(() => {
-            //   if (currentIndex < 11) {
-            //     setCurrentIndex(currentIndex + 1);
-            //   }
-            // }, [currentIndex]),
-            // console.log(milestoneData[currentIndex].input)
           )}
           <input
             className="generateScheduleBttn"
             type="submit"
             value="Generate Schedule"
+            onClick={handleGenerateSchedule}
           />
         </form>
       </div>
