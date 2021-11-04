@@ -62,7 +62,7 @@ const CustomerInfo = (props) => {
             />
           </label>
           <label className="pink-scenario">
-            <p>Pink Scenario</p>
+            <p>Goals</p>
             <textarea
               rows="8"
               cols="75"
