@@ -15,7 +15,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -10;
+  z-index: 1;
 }
 
 .customer-info-wrapper .bg-blobs .blob1 {
@@ -58,6 +58,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 
 .customer-info-wrapper .user-info .landing-laptop-img {
@@ -122,6 +123,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  z-index: 2;
 }
 
 .customer-info-wrapper .user-info-form form {
@@ -142,7 +144,7 @@
 }
 
 .customer-info-wrapper .user-info-form form .user-info-form-header {
-  color: #031d44;
+  color: #fff;
   font-size: 48px;
   text-align: left;
   margin-bottom: 1em;
@@ -173,7 +175,7 @@
 }
 
 .customer-info-wrapper .user-info-form form label {
-  color: #031d44;
+  color: #fff;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,6 +201,7 @@
   position: absolute;
   z-index: 3;
   background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 .customer-info-wrapper .user-info-form form label input:focus,

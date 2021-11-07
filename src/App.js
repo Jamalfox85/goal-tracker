@@ -9,7 +9,7 @@ function App() {
   const [milestoneInformation, setMilestoneInformation] = useState([]);
 
   const passMilestones = (listData) => {
-    setMilestoneInformation(listData.toString().split(','));
+    setMilestoneInformation(listData.toString().split(","));
     console.log(milestoneInformation);
   };
 
